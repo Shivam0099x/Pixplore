@@ -29,7 +29,7 @@ export const searchSlice = createSlice({
           state.loading = false
        },
        clearResults:(state)=>{
-        state.results = []
+        state.result = []
        }
     }
 })
