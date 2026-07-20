@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import VideoModal from "./VideoModal";
 
 import {
   fetchPhotos,
@@ -17,6 +18,8 @@ import {
 import ResultCard from "./ResultCard";
 
 const ResultGrid = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
   const dispatch = useDispatch();
 
   const { query, activeTab, result, loading, error } = useSelector(
@@ -38,7 +41,7 @@ const ResultGrid = () => {
         dispatch(setLoading());
 
         const data = await fetchers[activeTab](query);
-        console.log(data);
+        // console.log(data);
 
         dispatch(setResults(data));
       } catch (err) {
@@ -75,11 +78,20 @@ const ResultGrid = () => {
   // dispatch(setResults(data));
 
   return (
-    <div className="flex flex-wrap justify-between gap-6 overflow-auto px-10">
-      {result.map((item) => (
-        <ResultCard key={item.id} item={item} />
-      ))}
-    </div>
+    <>
+      <div className="flex flex-wrap justify-between gap-6 overflow-auto px-10">
+        {result.map((item) => (
+          <ResultCard key={item.id} item={item} onPlay={setSelectedVideo} />
+        ))}
+      </div>
+
+      {selectedVideo && (
+        <VideoModal
+          video={selectedVideo}
+          onClose={() => setSelectedVideo(null)}
+        />
+      )}
+    </>
   );
 };
 
