@@ -42,6 +42,11 @@ Users can also save their favorite media locally using **localStorage**, making 
 
 Clone the repository
 
+- Live Demo
+```bash
+https://pixplore-seven.vercel.app/
+```
+
 ```bash
 git clone https://github.com/Shivam0099x/Pixplore.git
 ```
