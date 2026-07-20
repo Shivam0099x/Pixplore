@@ -1,7 +1,7 @@
 import { FaPlay, FaDownload } from "react-icons/fa";
 import { BsBookmarkPlus } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { addCollection, addedToast } from "../redux/features/collectionSlice";
+import { addCollection, addedToast } from "../redux/Features/collectionSlice";
 
 const ResultCard = ({ item, onPlay }) => {
   const dispatch = useDispatch();
