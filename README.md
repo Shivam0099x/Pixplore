@@ -14,7 +14,6 @@ Users can also save their favorite media locally using **localStorage**, making 
 - 😂 Explore GIFs
 - ❤️ Save favorite media locally
 - 📱 Fully responsive design
-- ⚡ Fast search experience
 - 🔄 Tab-based media navigation
 - 📦 Global state management with Redux Toolkit
 - 💾 Persistent favorites using localStorage
@@ -34,8 +33,9 @@ Users can also save their favorite media locally using **localStorage**, making 
 ### APIs
 
 - Unsplash API (Photos)
-- Video API
-- GIF API
+- Youtube Video API
+- Giphy GIF API
+- Giphy Stickers API
 
 
 ## 🚀 Installation
@@ -43,7 +43,7 @@ Users can also save their favorite media locally using **localStorage**, making 
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/Pixplore.git
+git clone https://github.com/Shivam0099x/Pixplore.git
 ```
 
 Navigate into the project
@@ -61,9 +61,9 @@ npm install
 Create a `.env` file
 
 ```env
-VITE_UNSPLASH_ACCESS_KEY=your_key
-VITE_VIDEO_API_KEY=your_key
-VITE_GIF_API_KEY=your_key
+VITE_UNSPLASH_API_KEY=your_key
+VITE_YOUTUBE_API_KEY=your_key
+VITE_GIPHY_API_KEY=your_key
 ```
 
 Start the development server
@@ -78,7 +78,6 @@ npm run dev
 ## 🌟 Future Improvements
 
 - Infinite scrolling
-- Download media
 - Copy media links
 - Recent searches
 - Search suggestions
@@ -88,13 +87,6 @@ npm run dev
 - Collections & playlists
 
 ---
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome.
-
----
-
 
 ## 👨‍💻 Author
 
